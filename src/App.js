@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ImageCards from "./components/ImageCards";
+import SearchImage from "./components/SearchImage";
 function App() {
   const [image, setImage] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className="container mx-auto">
+      {  <SearchImage setTerm = {setTerm} term={term}/>}
       {isLoading ? (
         <h2 className="text-4xl text-center mt-20 text-green-500 font-bold  ">
           {" "}
